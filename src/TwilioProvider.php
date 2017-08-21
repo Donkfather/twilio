@@ -19,8 +19,8 @@ class TwilioProvider extends ServiceProvider
 
                 return new Twilio(
                     $this->app->makeWith(TwilioClient::class, [
-                        $config['account_sid'],
-                        $config['auth_token'],
+                        'username'=>$config['account_sid'],
+                        'password'=>$config['auth_token'],
                     ]),
                     $config['from']
                 );
